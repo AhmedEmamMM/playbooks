@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Playbooks: theme
+   Every color, font, radius and spacing value lives here.
+   Appearance options are data attributes on <html>, set by js/appearance.js:
+     data-pal, data-depth, data-code, data-hl, data-font, data-radius
+   (layout options such as data-var/data-card/data-top live in app.css).
+
+   To add a palette: copy one [data-pal="…"] block, rename it, change the
+   colors, then add it to PALETTES in js/appearance.js.
+   ========================================================================== */
+
+:root {
+  /* --- Palette (Graphite is the default) ---------------------------------- */
+  --bg:          #EBECEE;   /* page */
+  --surface:     #FFFFFF;   /* cards, panels */
+  --subtle:      #F5F5F6;   /* hover, inputs */
+  --line:        #DCDEE2;
+  --line2:       #C7CAD0;
+  --ink:         #111318;   /* main text */
+  --ink2:        #4A4E57;   /* secondary text */
+  --ink3:        #888C95;   /* hints, meta */
+  --accent:      #1F2430;   /* buttons, active items */
+  --accent-ink:  #1F2430;   /* accent used as text */
+  --accent-soft: #E6E8EC;
+  --on-accent:   #FFFFFF;
+
+  /* highlight: action numbers + content tags */
+  --hl:          #2563EB;
+  --hl-soft:     #E5EDFD;
+
+  /* feedback */
+  --ok:          #12965F;
+  --ok-soft:     #E2F5EC;
+  --danger:      #D33A4C;
+  --danger-soft: #FCE8EA;
+
+  /* prompt box (dark by default) */
+  --code-bg:     #151A24;
+  --code-ink:    #E6EAF2;
+  --code-line:   #262E3D;
+  --code-label:  #A9BDFF;
+
+  /* page background after the "shade" option is applied */
+  --page: color-mix(in srgb, var(--bg) 82%, #8A93A3);
+
+  /* --- Type ------------------------------------------------------------ */
+  --font-head: "Geist", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --text-xs: 0.75rem;   /* 12 */
+  --text-sm: 0.8125rem; /* 13 */
+  --text-md: 0.875rem;  /* 14 */
+  --text-base: 0.9375rem; /* 15 */
+  --text-lg: 1.125rem;  /* 18 */
+  --text-xl: 1.5rem;    /* 24 */
+
+  /* --- Spacing (4px base) ---------------------------------------------- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-7: 28px; --space-8: 32px;
+  --space-10: 40px; --space-12: 48px;
+
+  /* --- Radius (Round is the default) ------------------------------------ */
+  --r-card: 20px;   /* cards, panels, modals */
+  --r-ctl: 999px;   /* buttons, inputs, chips */
+  --r-box: 14px;    /* prompt box, sections, menus */
+  --r-field: 12px;  /* multi-line text fields */
+
+  --shadow-pop: 0 12px 28px -10px rgba(17, 19, 24, 0.3);
+  --shadow-modal: 0 30px 60px -20px rgba(17, 19, 24, 0.45);
+  --sidebar-w: 240px;
+  --app-max: 1480px;
+}
+
+/* --- Palettes ------------------------------------------------------------ */
+[data-pal="graphite"] { --bg:#EBECEE; --subtle:#F5F5F6; --line:#DCDEE2; --line2:#C7CAD0; --ink:#111318; --ink2:#4A4E57; --ink3:#888C95; --accent:#1F2430; --accent-ink:#1F2430; --accent-soft:#E6E8EC; }
+[data-pal="cobalt"]   { --bg:#ECEFF3; --subtle:#F5F7FA; --line:#DDE2EA; --line2:#C9D0DB; --ink:#161B26; --ink2:#4B5565; --ink3:#8A93A3; --accent:#2F6BFF; --accent-ink:#1E4FD1; --accent-soft:#E7EEFF; }
+[data-pal="teal"]     { --bg:#EAEEED; --subtle:#F4F7F6; --line:#D8DFDD; --line2:#C3CDCA; --ink:#14201E; --ink2:#485652; --ink3:#86938F; --accent:#0E7C6B; --accent-ink:#0A5F52; --accent-soft:#DFF1EC; }
+[data-pal="indigo"]   { --bg:#EDEDF1; --subtle:#F6F6F9; --line:#DEDEE7; --line2:#CACAD6; --ink:#17172A; --ink2:#4C4C63; --ink3:#8A8AA0; --accent:#4F46E5; --accent-ink:#3A31C2; --accent-soft:#ECEBFD; }
+[data-pal="forest"]   { --bg:#ECEEEA; --subtle:#F5F6F3; --line:#DCE0D8; --line2:#C8CEC2; --ink:#18201A; --ink2:#4A5549; --ink3:#879184; --accent:#2F7A45; --accent-ink:#225C33; --accent-soft:#E2F1E6; }
+[data-pal="sunset"]   { --bg:#F0EEEC; --subtle:#F8F6F4; --line:#E3DFDB; --line2:#D2CCC6; --ink:#211A16; --ink2:#5A4F48; --ink3:#968B84; --accent:#D9480F; --accent-ink:#B23A0A; --accent-soft:#FDEBE2; }
+[data-pal="rose"]     { --bg:#F0EDEF; --subtle:#F8F6F7; --line:#E3DDE1; --line2:#D2CAD0; --ink:#221722; --ink2:#5A4A57; --ink3:#968894; --accent:#C2255C; --accent-ink:#9C1A48; --accent-soft:#FBE7EE; }
+[data-pal="violet"]   { --bg:#EEEDF2; --subtle:#F7F6FA; --line:#E0DEE8; --line2:#CDC9D8; --ink:#1B1726; --ink2:#524C63; --ink3:#8E88A0; --accent:#7C3AED; --accent-ink:#6025C9; --accent-soft:#F0E9FE; }
+
+/* --- Background shade ------------------------------------------------------ */
+[data-depth="light"]  { --page: color-mix(in srgb, var(--bg) 55%, #FFFFFF); }
+[data-depth="normal"] { --page: var(--bg); }
+[data-depth="medium"] { --page: color-mix(in srgb, var(--bg) 82%, #8A93A3); }
+
+/* --- Prompt box ------------------------------------------------------------ */
+[data-code="light"] { --code-bg: var(--subtle); --code-ink: var(--ink); --code-line: var(--line); --code-label: var(--accent-ink); }
+[data-code="dark"]  { --code-bg: #151A24; --code-ink: #E6EAF2; --code-line: #262E3D; --code-label: #A9BDFF; }
+
+/* --- Highlight color ------------------------------------------------------- */
+[data-hl="blue"]   { --hl: #2563EB; --hl-soft: #E5EDFD; }
+[data-hl="orange"] { --hl: #C2410C; --hl-soft: #FCEADF; }
+[data-hl="green"]  { --hl: #15803D; --hl-soft: #E3F3E8; }
+[data-hl="grey"]   { --hl: #4A4E57; --hl-soft: #E6E8EC; }
+
+/* --- Font ------------------------------------------------------------------ */
+[data-font="geist"]   { --font-body: "Geist", "Inter", system-ui, sans-serif; }
+[data-font="grotesk"] { --font-head: "Space Grotesk", "Inter", system-ui, sans-serif; }
+[data-font="plex"]    { --font-head: "IBM Plex Sans", system-ui, sans-serif; --font-body: "IBM Plex Sans", system-ui, sans-serif; --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace; }
+
+/* --- Corners --------------------------------------------------------------- */
+[data-radius="sharp"]  { --r-card: 4px;  --r-ctl: 4px;   --r-box: 4px;  --r-field: 4px; }
+[data-radius="medium"] { --r-card: 12px; --r-ctl: 9px;   --r-box: 10px; --r-field: 9px; }
+[data-radius="round"]  { --r-card: 20px; --r-ctl: 999px; --r-box: 14px; --r-field: 12px; }
