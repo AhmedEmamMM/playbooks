@@ -1,0 +1,1 @@
+{ "name": "playbooks-tests", "private": true, "description": "End-to-end test for website/index.html (opened over file://).", "scripts": { "test": "node e2e.js" }, "devDependencies": { "playwright": "1.49.1" } }
