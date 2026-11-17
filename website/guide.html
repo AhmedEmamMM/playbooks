@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playbooks — Visionare</title>
+  <meta name="description" content="Save what you learned as playbooks. Each step has an explanation and a one-click copyable prompt. Browse collections, or switch to focus mode to do it." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/guide.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" data-nav aria-label="Primary">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+          <span>Visionare</span>
+        </a>
+        <div class="nav__links">
+          <a href="index.html">Home</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#blog">Blog</a>
+          <a href="guide.html" aria-current="page">Playbooks</a>
+        </div>
+        <div class="nav__actions">
+          <a class="nav__login" href="#">Log in</a>
+          <a class="btn btn-primary" href="#">Get started</a>
+          <button class="nav__toggle" data-nav-toggle aria-expanded="false" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="pb-toolbar">
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input type="text" data-search placeholder="Search prompts and collections…" aria-label="Search" />
+        </label>
+        <div class="pb-menu" data-menu-wrap>
+          <button class="icon-btn" data-menu-btn type="button" aria-haspopup="true" aria-expanded="false" aria-label="More actions"><i data-lucide="ellipsis-vertical"></i></button>
+          <div class="menu" data-menu hidden role="menu">
+            <button class="menu__item" data-import-old type="button" role="menuitem"><i data-lucide="rotate-ccw"></i> Import old phases</button>
+            <button class="menu__item" data-export type="button" role="menuitem"><i data-lucide="download"></i> Export playbooks (.json)</button>
+            <button class="menu__item" data-import type="button" role="menuitem"><i data-lucide="upload"></i> Import playbooks (.json)</button>
+          </div>
+        </div>
+        <button class="btn btn-primary" data-new-collection type="button"><i data-lucide="plus"></i> New collection</button>
+        <input type="file" accept="application/json,.json" data-import-file hidden />
+      </div>
+      <div class="pb" data-pb></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"><i data-lucide="sparkles"></i></span>
+            <span>Visionare</span>
+          </a>
+          <p>Simplify your workflow and get more done, faster — with human-grade AI.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Product</h4>
+          <a href="index.html#features">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Integrations</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="index.html">Home</a>
+          <a href="guide.html">Playbooks</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Visionare, Inc. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <button class="nav__login" data-theme-toggle type="button">Toggle theme</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Save / Discard bar (shown when there are unsaved changes) -->
+  <div class="save-bar" data-save-bar hidden role="region" aria-label="Unsaved changes">
+    <span class="save-bar__msg"><span class="save-bar__dot" aria-hidden="true"></span> Unsaved changes</span>
+    <div class="save-bar__actions">
+      <button class="btn btn-ghost" data-discard type="button">Discard</button>
+      <button class="btn btn-primary" data-save type="button">Save changes</button>
+    </div>
+  </div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/guide.js"></script>
+</body>
+</html>
